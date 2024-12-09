@@ -7,6 +7,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: OpenSans;
+    font-size: 24px;
+}
+h2 {
+    font-size: 32px;
 }
 img {
     width: 100%;
@@ -18,8 +22,8 @@ ul {
 }
 article ul li span {
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-top: 4px solid white;
     border-left: 4px solid white;
     transform: rotate(-45deg);
@@ -31,12 +35,9 @@ article ul li:last-child span{
 article ul {
     width: 100%;
     height: 100%;
-    position: static;
-    display: flex;
-    flex-direction: column;
-    justify-items: stretch;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    align-items: center;
 }
 article ul li:last-child{
     justify-self: end;
@@ -45,36 +46,49 @@ article {
     position: relative;
     display: grid;
     grid-template-rows: 50vw;
-
 }
 article div {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    justify-content: space-between;
-    padding: 40px;
+    justify-content: stretch;
+    padding: 20px;
     color: white;
 }
 article div p {
     text-align: center;
+    align-self: end;
+}
+footer {
+    display: grid;
+    justify-items: center;
+    padding: 20px 0;
+}
+footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, 20px);
+    column-gap: 10px;
 }
 footer ul li {
     height: 20px;
     width: 20px;
-    background-color: gray;
+    background-color: lightgray;
     border-radius: 50%;
+    cursor: pointer;
 }
-section {
-    border: ;
-
+.active {
+    background-color: gray;
 }
 article {
     display: none;
 }
 .active {
     display: grid;
-
+}
+section {
+    padding: 20px 0;
 }
